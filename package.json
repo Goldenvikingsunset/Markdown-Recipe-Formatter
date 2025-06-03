@@ -1,0 +1,267 @@
+{
+  "name": "markdown-recipe-formatter",
+  "displayName": "Markdown Recipe Formatter & Previewer",
+  "description": "🍳 Professional recipe formatting, previewing, and printing for Markdown files. Perfect for home cooks and food bloggers!",
+  "version": "1.0.0",
+  "publisher": "GingerTurtle",
+  "author": {
+    "name": "Renni",
+    "email": "renni@goldenvikingsunset.onmicrosoft.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renni-dev/markdown-recipe-formatter"
+  },
+  "bugs": {
+    "url": "https://github.com/renni-dev/markdown-recipe-formatter/issues"
+  },
+  "sponsor": {
+    "url": "https://buymeacoffee.com/gingerturtle"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Formatters",
+    "Other",
+    "Snippets",
+    "Themes"
+  ],
+  "keywords": [
+    "recipe",
+    "markdown",
+    "cooking",
+    "formatter",
+    "preview",
+    "food",
+    "kitchen",
+    "ingredients",
+    "instructions",
+    "print",
+    "export",
+    "culinary",
+    "chef",
+    "food-blog"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "icon": "images/icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "recipeFormatter.sponsor",
+        "title": "☕ Support This Extension",
+        "category": "Recipe Formatter",
+        "icon": "$(heart)"
+      },
+      {
+        "command": "recipeFormatter.newRecipe",
+        "title": "🍳 New Recipe",
+        "category": "Recipe Formatter",
+        "icon": "$(file-add)"
+      },
+      {
+        "command": "recipeFormatter.formatIngredients",
+        "title": "📝 Format Ingredients",
+        "category": "Recipe Formatter",
+        "icon": "$(list-unordered)"
+      },
+      {
+        "command": "recipeFormatter.formatSteps",
+        "title": "🔢 Format Instructions",
+        "category": "Recipe Formatter",
+        "icon": "$(list-ordered)"
+      },
+      {
+        "command": "recipeFormatter.insertTemplate",
+        "title": "📋 Insert Recipe Template",
+        "category": "Recipe Formatter",
+        "icon": "$(symbol-misc)"
+      },
+      {
+        "command": "recipeFormatter.previewRecipe",
+        "title": "👁️ Preview Recipe",
+        "category": "Recipe Formatter",
+        "icon": "$(preview)"
+      },
+      {
+        "command": "recipeFormatter.exportRecipe",
+        "title": "📄 Export Recipe",
+        "category": "Recipe Formatter",
+        "icon": "$(export)"
+      },
+      {
+        "command": "recipeFormatter.validateRecipe",
+        "title": "✅ Validate Recipe",
+        "category": "Recipe Formatter",
+        "icon": "$(check)"
+      },
+      {
+        "command": "recipeFormatter.formatNutrition",
+        "title": "🥗 Format Nutrition Info",
+        "category": "Recipe Formatter",
+        "icon": "$(pie-chart)"
+      },
+      {
+        "command": "recipeFormatter.addTimer",
+        "title": "⏱️ Add Timer",
+        "category": "Recipe Formatter",
+        "icon": "$(watch)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "recipeFormatter.newRecipe",
+        "key": "ctrl+shift+r n",
+        "mac": "cmd+shift+r n",
+        "when": "editorLangId == markdown"
+      },
+      {
+        "command": "recipeFormatter.previewRecipe",
+        "key": "ctrl+shift+r p",
+        "mac": "cmd+shift+r p",
+        "when": "editorLangId == markdown"
+      },
+      {
+        "command": "recipeFormatter.formatIngredients",
+        "key": "ctrl+shift+r i",
+        "mac": "cmd+shift+r i",
+        "when": "editorLangId == markdown"
+      },
+      {
+        "command": "recipeFormatter.formatSteps",
+        "key": "ctrl+shift+r s",
+        "mac": "cmd+shift+r s",
+        "when": "editorLangId == markdown"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorLangId == markdown",
+          "submenu": "recipeFormatter.contextMenu",
+          "group": "navigation"
+        }
+      ],
+      "recipeFormatter.contextMenu": [
+        {
+          "command": "recipeFormatter.newRecipe",
+          "group": "1_creation@1"
+        },
+        {
+          "command": "recipeFormatter.insertTemplate",
+          "group": "1_creation@2"
+        },
+        {
+          "command": "recipeFormatter.formatIngredients",
+          "group": "2_formatting@1"
+        },
+        {
+          "command": "recipeFormatter.formatSteps",
+          "group": "2_formatting@2"
+        },
+        {
+          "command": "recipeFormatter.formatNutrition",
+          "group": "2_formatting@3"
+        },
+        {
+          "command": "recipeFormatter.validateRecipe",
+          "group": "3_tools@1"
+        },
+        {
+          "command": "recipeFormatter.previewRecipe",
+          "group": "4_preview@1"
+        },
+        {
+          "command": "recipeFormatter.exportRecipe",
+          "group": "4_preview@2"
+        },
+        {
+          "command": "recipeFormatter.sponsor",
+          "group": "5_support@1"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceExtname == .md",
+          "command": "recipeFormatter.previewRecipe",
+          "group": "navigation"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "recipeFormatter.contextMenu",
+        "label": "🍳 Recipe Formatter"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/recipes.json"
+      }
+    ],
+    "configuration": {
+      "title": "Recipe Formatter",
+      "properties": {
+        "recipeFormatter.defaultServings": {
+          "type": "number",
+          "default": 4,
+          "description": "Default number of servings for new recipes",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "recipeFormatter.includeNutrition": {
+          "type": "boolean",
+          "default": false,
+          "description": "Include nutrition information section in new recipes"
+        },
+        "recipeFormatter.autoFormatIngredients": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically format ingredients with proper fractions and units"
+        },
+        "recipeFormatter.useMetricUnits": {
+          "type": "boolean",
+          "default": false,
+          "description": "Prefer metric units in formatting suggestions"
+        },
+        "recipeFormatter.includeTimers": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include timer suggestions in cooking steps"
+        },
+        "recipeFormatter.printFriendlyPreview": {
+          "type": "boolean",
+          "default": true,
+          "description": "Optimize preview for printing (remove backgrounds, etc.)"
+        },
+        "recipeFormatter.showTips": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show cooking tips and suggestions while formatting"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "echo Linting skipped - focusing on core functionality",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^16.18.0",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.2.0",
+    "vsce": "^2.15.0"
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "Recipe Template": {
+    "prefix": "recipe",
+    "body": [
+      "# ${1:Recipe Title}",
+      "",
+      "*${2:Brief description of the recipe}*",
+      "",
+      "## Recipe Information",
+      "- **Servings:** ${3:4}",
+      "- **Prep Time:** ${4:15 minutes}",
+      "- **Cook Time:** ${5:30 minutes}",
+      "- **Total Time:** ${6:45 minutes}",
+      "- **Difficulty:** ${7|Easy,Medium,Hard|}",
+      "",
+      "## Ingredients",
+      "",
+      "- ${8:ingredient}",
+      "- ${9:ingredient}",
+      "- ${10:ingredient}",
+      "",
+      "## Instructions",
+      "",
+      "1. ${11:First step}",
+      "2. ${12:Second step}",
+      "3. ${13:Third step}",
+      "",
+      "## Notes",
+      "",
+      "- ${14:Any special notes or tips}",
+      "",
+      "---",
+      "",
+      "*Recipe created with [Markdown Recipe Formatter](https://buymeacoffee.com/gingerturtle) 🍳*"
+    ],
+    "description": "Complete recipe template with all sections"
+  },
+  
+  "Recipe Header": {
+    "prefix": "rhead",
+    "body": [
+      "# ${1:Recipe Title}",
+      "",
+      "*${2:Brief description}*",
+      "",
+      "## Recipe Information",
+      "- **Servings:** ${3:4}",
+      "- **Prep Time:** ${4:15 minutes}",
+      "- **Cook Time:** ${5:30 minutes}",
+      "- **Total Time:** ${6:45 minutes}",
+      "- **Difficulty:** ${7|Easy,Medium,Hard|}",
+      ""
+    ],
+    "description": "Recipe header with metadata"
+  },
+
+  "Ingredients Section": {
+    "prefix": "ingredients",
+    "body": [
+      "## Ingredients",
+      "",
+      "- ${1:amount} ${2:unit} ${3:ingredient}",
+      "- ${4:amount} ${5:unit} ${6:ingredient}",
+      "- ${7:amount} ${8:unit} ${9:ingredient}",
+      ""
+    ],
+    "description": "Ingredients section template"
+  },
+
+  "Instructions Section": {
+    "prefix": "instructions",
+    "body": [
+      "## Instructions",
+      "",
+      "1. ${1:First step} ⏱️ ${2:time}",
+      "2. ${3:Second step}",
+      "3. ${4:Third step}",
+      ""
+    ],
+    "description": "Instructions section template"
+  },
+
+  "Nutrition Information": {
+    "prefix": "nutrition",
+    "body": [
+      "## Nutrition Information",
+      "",
+      "*Per serving (approximate):*",
+      "",
+      "- **Calories:** ${1:calories}",
+      "- **Protein:** ${2:protein}g",
+      "- **Carbs:** ${3:carbs}g",
+      "- **Fat:** ${4:fat}g",
+      "- **Fiber:** ${5:fiber}g",
+      "- **Sugar:** ${6:sugar}g",
+      ""
+    ],
+    "description": "Nutrition information template"
+  },
+
+  "Cooking Timer": {
+    "prefix": "timer",
+    "body": "⏱️ ${1:15 min}",
+    "description": "Insert cooking timer"
+  },
+
+  "Temperature": {
+    "prefix": "temp",
+    "body": "${1:350}°F (${2:175}°C)",
+    "description": "Temperature with Fahrenheit and Celsius"
+  },
+
+  "Fraction Half": {
+    "prefix": "1/2",
+    "body": "½",
+    "description": "Half fraction symbol"
+  },
+
+  "Fraction Quarter": {
+    "prefix": "1/4",
+    "body": "¼",
+    "description": "Quarter fraction symbol"
+  },
+
+  "Fraction Three Quarters": {
+    "prefix": "3/4",
+    "body": "¾",
+    "description": "Three quarters fraction symbol"
+  },
+
+  "Fraction Third": {
+    "prefix": "1/3",
+    "body": "⅓",
+    "description": "One third fraction symbol"
+  },
+
+  "Fraction Two Thirds": {
+    "prefix": "2/3",
+    "body": "⅔",
+    "description": "Two thirds fraction symbol"
+  },
+
+  "Recipe Notes": {
+    "prefix": "notes",
+    "body": [
+      "## Notes",
+      "",
+      "- ${1:Cooking tip}",
+      "- ${2:Storage instructions}",
+      "- ${3:Variation suggestions}",
+      ""
+    ],
+    "description": "Recipe notes section"
+  },
+
+  "Baking Recipe": {
+    "prefix": "baking",
+    "body": [
+      "# ${1:Baked Good Name}",
+      "",
+      "## Recipe Information",
+      "- **Servings:** ${2:12 pieces}",
+      "- **Prep Time:** ${3:20 minutes}",
+      "- **Bake Time:** ${4:25 minutes}",
+      "- **Total Time:** ${5:45 minutes}",
+      "- **Temperature:** ${6:350}°F (${7:175}°C)",
+      "",
+      "## Ingredients",
+      "",
+      "- ${8:2 cups} all-purpose flour",
+      "- ${9:1 cup} sugar",
+      "- ${10:½ cup} butter, softened",
+      "- ${11:2 large} eggs",
+      "- ${12:1 teaspoon} vanilla extract",
+      "- ${13:1 teaspoon} baking powder",
+      "- ${14:½ teaspoon} salt",
+      "",
+      "## Instructions",
+      "",
+      "1. Preheat oven to ${6:350}°F (${7:175}°C) ⏱️ 15 min",
+      "2. ${15:Mix dry ingredients in a bowl}",
+      "3. ${16:Cream butter and sugar until fluffy}",
+      "4. ${17:Add eggs and vanilla}",
+      "5. ${18:Gradually mix in dry ingredients}",
+      "6. Bake for ${4:25} minutes ⏱️ ${4:25} min",
+      "7. Cool before serving ⏱️ 10 min",
+      ""
+    ],
+    "description": "Complete baking recipe template"
+  },
+
+  "Cooking Recipe": {
+    "prefix": "cooking",
+    "body": [
+      "# ${1:Dish Name}",
+      "",
+      "## Recipe Information",
+      "- **Servings:** ${2:4}",
+      "- **Prep Time:** ${3:15 minutes}",
+      "- **Cook Time:** ${4:30 minutes}",
+      "- **Total Time:** ${5:45 minutes}",
+      "",
+      "## Ingredients",
+      "",
+      "- ${6:1 lb} ${7:main protein}",
+      "- ${8:2 tablespoons} cooking oil",
+      "- ${9:1 medium} onion, diced",
+      "- ${10:2 cloves} garlic, minced",
+      "- Salt and pepper to taste",
+      "",
+      "## Instructions",
+      "",
+      "1. Heat oil in large skillet over medium-high heat",
+      "2. Season ${7:protein} with salt and pepper",
+      "3. Cook ${7:protein} until browned ⏱️ ${11:5} min per side",
+      "4. Add onion and garlic, cook until fragrant ⏱️ 3 min",
+      "5. ${12:Continue cooking instructions}",
+      "6. Serve hot",
+      ""
+    ],
+    "description": "Complete cooking recipe template"
+  },
+
+  "Recipe Variation": {
+    "prefix": "variation",
+    "body": [
+      "### ${1:Variation Name}",
+      "",
+      "- **Change:** ${2:What to change}",
+      "- **Result:** ${3:Expected outcome}",
+      ""
+    ],
+    "description": "Recipe variation template"
+  },
+
+  "Storage Instructions": {
+    "prefix": "storage",
+    "body": [
+      "## Storage",
+      "",
+      "- **Refrigerator:** ${1:Up to 3 days} in airtight container",
+      "- **Freezer:** ${2:Up to 3 months} when properly wrapped",
+      "- **Room Temperature:** ${3:2 days} covered",
+      ""
+    ],
+    "description": "Storage instructions template"
+  },
+
+  "Recipe Source": {
+    "prefix": "source",
+    "body": [
+      "---",
+      "",
+      "**Source:** ${1:Recipe source}",
+      "**Adapted by:** ${2:Your name}",
+      "**Date:** ${CURRENT_DATE}",
+      "",
+      "*Recipe created with [Markdown Recipe Formatter](https://buymeacoffee.com/gingerturtle) 🍳*"
+    ],
+    "description": "Recipe source and attribution"
+  }
+}
